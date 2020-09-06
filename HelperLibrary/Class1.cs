@@ -46,5 +46,41 @@ namespace HelperLibrary
         {
             Console.ReadKey();
         }
+
+        /// <summary>
+        /// Проверка на ввод числа (int)
+        /// </summary>
+        /// <returns></returns>
+        static public int CheckInt()
+        {
+            while (true)
+                if (!int.TryParse(Console.ReadLine(), out int x))
+                    Console.Write("Неверный ввод (требуется числовое значение).\nПожалуйста повторите ввод: ");
+                else return x;
+        }
+
+        /// <summary>
+        /// Проверка на ввод числа (double)
+        /// </summary>
+        /// <returns></returns>
+        static public double CheckDouble()
+        {
+            while (true)
+                if (!double.TryParse(Console.ReadLine(), out double x))
+                    Console.Write("Неверный ввод (требуется числовое значение).\nПожалуйста повторите ввод: ");
+                else return x;
+        }
+
+        /// <summary>
+        /// Проверка на ввод числа (long)
+        /// </summary>
+        /// <returns></returns>
+        static public long CheckLong()
+        {
+            while (true)
+                if (!long.TryParse(Console.ReadLine(), out long x))
+                    Console.Write("Неверный ввод (требуется числовое значение).\nПожалуйста повторите ввод: ");
+                else return x;
+        }
     }
 }
